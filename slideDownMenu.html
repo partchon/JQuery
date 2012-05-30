@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <div id="menu1" style="width:80px">Meny</div>
+  <div id="subMenu1" style="background:#de9a44; width:80px; display:none">
+	<div>menyknapp1</div>
+	<div>menyknapp2</div>
+	<div>menyknapp3</div>
+  </div>
+
+<script>
+$("#menu1").hover(function () {
+if ($("#subMenu1:first").is(":hidden")) {
+$("#subMenu1").slideDown("slow");
+} else {
+$("#subMenu1").slideUp();
+}
+});
+
+</script>
+
+</body>
+</html>
