@@ -4,24 +4,34 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-  <div id="menu1" style="width:80px">
+  <div class="menu" style="width:80px; float:left">
 	<div>Meny1</div>
-	<div id="subMenu1" style="background:#de9a44; width:80px; display:none">
-		<div><span id="test">lеееееееng menyknaaaaaaaaaaapp1<span></div>
+	<div id="subMenu" style="background:#de9a44; width:80px; display:none">
+		<div><span id="test">menyknaaaaaaaaaaapp1<span></div>
 		<div>menyknapp2</div>
 		<div>menyknapp3</div>
 	</div>
    </div>
-
+  <div class="menu" style="width:80px; float:left">
+	<div>Meny2</div>
+	<div id="subMenu" style="background:#abc123; width:80px; display:none">
+		<div><span id="test">menyknaaaaaaaaaaapp4<span></div>
+		<div>menyknapp5</div>
+		<div>menyknapp6</div>
+	</div>
+   </div>
 <script>
-$("#menu1").hover(function () {
-	if ($("#subMenu1:first").is(":hidden")) {
-		$("#subMenu1").slideDown("slow");
-		$("#subMenu1").width($("#test").width());
+$(".menu").hover(function () {
+	var childDiv = $(this).children("#subMenu");
+	//alert(childDiv.children("span").text());
+	if (childDiv.is(":hidden")) {
+		childDiv.slideDown("slow");
+		//childDiv.width(childDiv.children("#test").width());
 	} else {
-		$("#subMenu1").slideUp("slow");
+		childDiv.slideUp("slow");
 	}
 });
+
 
 </script>
 
