@@ -7,7 +7,7 @@
   <div class="menu" style="width:80px; float:left">
 	<div>Meny1</div>
 	<div id="subMenu" style="background:#de9a44; width:80px; display:none">
-		<div><span id="test">menyknaaaaaaaaaaapp1<span></div>
+		<div><span id="span">menyknaaaaaaaaaaapp1<span></div>
 		<div>menyknapp2</div>
 		<div>menyknapp3</div>
 	</div>
@@ -15,7 +15,7 @@
   <div class="menu" style="width:80px; float:left">
 	<div>Meny2</div>
 	<div id="subMenu" style="background:#abc123; width:80px; display:none">
-		<div><span id="test">menyknaaaaaaaaaaapp4<span></div>
+		<div><span id="span">menyknaaaaaaaaaaaaaaaapp4<span></div>
 		<div>menyknapp5</div>
 		<div>menyknapp6</div>
 	</div>
@@ -23,10 +23,10 @@
 <script>
 $(".menu").hover(function () {
 	var childDiv = $(this).children("#subMenu");
-	//alert(childDiv.children("span").text());
+	//alert($(this).find("#test").text());
 	if (childDiv.is(":hidden")) {
 		childDiv.slideDown("slow");
-		//childDiv.width(childDiv.children("#test").width());
+		childDiv.width(childDiv.find("#span").width());
 	} else {
 		childDiv.slideUp("slow");
 	}
